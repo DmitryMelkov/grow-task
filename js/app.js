@@ -30,10 +30,33 @@ window.addEventListener("DOMContentLoaded", function () {
     burger.classList.toggle("active");
   }
 
+  //слайдер
+  new Swiper(".slider__swiper", {
+    //Стрелки
+    navigation: {
+      nextEl: '.slider__btn-next',
+      prevEl: '.slider__btn-prev'
+    },
+    //Навигация
+    //Буллеты, текущее положение, прогрессбар
+    pagination: {
+      el: '.slider__pagination',
+      //буллеты
+      clickable: true,
+      //динамические буллеты
+      dynamicBullets: true,
+      //Кастомные буллеты (указать буллету номер)
+      renderBullet: function (index, className) {
+        return '<span class="' + className + '">' + (index + 1) + '</span>';
+      },
 
+
+      //Фракция
+      // type: 'fraction',
+    },
+
+  });
 });
-
-
 
 // $("#nav_toggle").on("click", function (event) {
 //   event.preventDefault();

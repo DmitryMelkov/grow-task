@@ -8,10 +8,10 @@
     <!-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> -->
 
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/style.css" />
     <title>Grow Task</title>
-    <script defer src="js/app.js"></script>
   </head>
   <body>
     <header class="header">
@@ -24,9 +24,9 @@
             <span class="header__menu-burger-line"></span>
           </button>
         </div>
-        <div class="header_nav" id="nav">
+        <div class="header__nav" id="nav">
           <nav class="nav">
-            <ul class="header__nav-list" >
+            <ul class="header__nav-list">
               <li class="header__nav-item">
                 <a href="#" class="header__nav-link"> Главная </a>
               </li>
@@ -47,9 +47,7 @@
               </li>
             </ul>
           </nav>
-
         </div>
-
       </div>
     </header>
     <main>
@@ -78,6 +76,66 @@
           </div>
         </div>
       </section>
+      <section class="section__slider">
+        <div class="container">
+          <div class="slider">
+            <h2 class="section__title">Слайдер</h2>
+
+            <div class="swiper slider__swiper">
+              <div class="swiper-wrapper slider__wrapper">
+                <div class="swiper-slide slider__slide">
+                  <div class="slider__img">
+                    <img class="slider__img-slide" src="img/slider/1.png" alt="img-1" />
+                  </div>
+                </div>
+                <div class="swiper-slide slider__slide">
+                  <div class="slider__img">
+                    <img class="slider__img-slide" src="img/slider/2.png" alt="img-2" />
+                  </div>
+                </div>
+                <div class="swiper-slide slider__slide">
+                  <div class="slider__img">
+                    <img class="slider__img-slide" src="img/slider/1.png" alt="img-1" />
+                  </div>
+                </div>
+                <div class="swiper-slide slider__slide">
+                  <div class="slider__img">
+                    <img class="slider__img-slide" src="img/slider/2.png" alt="img-2" />
+                  </div>
+                </div>
+                <div class="swiper-slide slider__slide">
+                  <div class="slider__img">
+                    <img class="slider__img-slide" src="img/slider/1.png" alt="img-1" />
+                  </div>
+                </div>
+                <div class="swiper-slide slider__slide">
+                  <div class="slider__img">
+                    <img class="slider__img-slide" src="img/slider/2.png" alt="img-2" />
+                  </div>
+                </div>
+                <div class="swiper-slide slider__slide">
+                  <div class="slider__img">
+                    <img class="slider__img-slide" src="img/slider/1.png" alt="img-1" />
+                  </div>
+                </div>
+                <div class="swiper-slide slider__slide">
+                  <div class="slider__img">
+                    <img class="slider__img-slide" src="img/slider/2.png" alt="img-2" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-pagination slider__pagination"></div>
+
+              <div class="swiper-button-prev slider__btn-prev"></div>
+              <div class="swiper-button-next slider__btn-next"></div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
+
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/app.js"></script>
   </body>
 </html>

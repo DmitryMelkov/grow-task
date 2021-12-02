@@ -109,7 +109,7 @@ label {
   height: 16px;
 }
 
-.header_nav {
+.header__nav {
   margin: 16px auto;
 }
 
@@ -205,6 +205,7 @@ label {
 =================*/
 .intro__container {
   display: flex;
+  height: 800px;
 }
 
 .intro__left {
@@ -263,7 +264,7 @@ label {
 .intro__modal {
   display: none;
   position: fixed;
-  z-index: 1;
+  z-index: 10;
   left: 0;
   top: 0;
   width: 100%;
@@ -311,6 +312,65 @@ label {
   align-items: center;
 }
 
+/*slider
+===============*/
+.slider {
+  margin-bottom: 200px;
+}
+
+.slider__swiper {
+  width: 100%;
+  height: 600px;
+}
+
+.slider__img {
+  text-align: center;
+}
+
+.slider__img-slide {
+  width: 75%;
+}
+
+/*убираем стандартные кнопки*/
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  font-size: 0;
+}
+
+/*делаем свои кнопки*/
+.slider__btn-next,
+.slider__btn-prev {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 48px;
+  height: 48px;
+}
+
+.slider__btn-prev {
+  background-image: url("../img/slider/ButtonPrev.svg");
+}
+
+.slider__btn-next {
+  background-image: url("../img/slider/ButtonNext.svg");
+}
+
+/*Буллеты*/
+.slider__pagination .swiper-pagination-bullet {
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  font-size: 14px;
+  background-color: var(--color-active);
+  color: #fff;
+}
+
+/*фракция*/
+/* .slider__pagination.swiper-pagination-fraction {
+  font-size: 20px;
+  color: #ad0e35;
+} */
+
 @media screen and (hover: hover) {
   a:hover {
     color: var(--color-hover);
@@ -354,13 +414,14 @@ label {
   }
 
   .intro__left {
-    z-index: 11;
+    z-index: 1;
     position: absolute;
-    top: 200px;
+    top: 70px;
   }
 
   .intro__right {
     position: absolute;
+    top: 165px;
     right: 0;
   }
 
@@ -370,7 +431,7 @@ label {
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
   .container {
     width: 100%;
     max-width: 654px;
@@ -385,7 +446,11 @@ label {
     display: block;
   }
 
-  .header_nav {
+  .header__menu-burger {
+    display: block;
+  }
+
+  .header__nav {
     display: none;
 
     margin-left: calc((100% - 654px) / 2);
@@ -394,10 +459,10 @@ label {
     top: 0;
     left: 0;
 
-    z-index: 1111;
+    z-index: 11;
 
     transform: translateY(15%);
-    transition: transform 1s ease-in-out;
+    transition: all 1s ease-in-out;
   }
 
   .header__nav-list {
@@ -407,12 +472,99 @@ label {
     background-color: var(--color-white);
   }
 
-  .open {
+  .header__nav.open {
     display: block;
-
+    transition: all 1s linear;
   }
 
-  .header__menu-burger {
-    display: block;
+  /*intro
+  ==================*/
+  .intro__container {
+    height: 400px;
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    width: 100%;
+    max-width: 465px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: calc((100% - 465px) / 2);
+  }
+
+  /*header
+  ===============*/
+  .header__nav {
+    margin-left: calc((100% - 465px) / 2);
+  }
+
+  /*intro
+  =======================*/
+  .intro__left {
+    width: 90%;
+    top: 20px;
+  }
+
+  .intro__right {
+    top: 70px;
+  }
+
+  .section__title {
+    font-size: 38px;
+    line-height: 48px;
+  }
+
+  .intro__right-img {
+    width: 375px;
+    height: 300px;
+  }
+
+  .intro__modal-text {
+    font-size: 36px;
+    line-height: 48px;
+  }
+
+  .intro__modal-content {
+    width: 60%;
+    height: 300px;
+  }
+}
+
+@media (max-width: 499px) {
+  .container {
+    width: 100%;
+    max-width: 400px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: calc((100% - 400px) / 2);
+  }
+
+  /*header
+  ===============*/
+  .header__nav {
+    margin-left: calc((100% - 400px) / 2);
+  }
+
+  /*intro
+  =================*/
+  .intro__subtitle {
+    margin-bottom: 200px;
+  }
+}
+
+@media (max-width: 375px) {
+  .container {
+    width: 100%;
+    max-width: 320px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: calc((100% - 320px) / 2);
+  }
+
+  /*header
+  ===============*/
+  .header__nav {
+    margin-left: calc((100% - 320px) / 2);
   }
 }
