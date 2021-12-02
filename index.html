@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- jquery -->
+    <!-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> -->
+
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Grow Task</title>
+    <script defer src="js/app.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header__container">
+          <div class="header__logo"></div>
+          <button id="nav_toggle" aria-label="Меню" class="header__menu-burger">
+            <span class="header__menu-burger-line"></span>
+            <span class="header__menu-burger-line"></span>
+            <span class="header__menu-burger-line"></span>
+          </button>
+        </div>
+        <div class="header_nav" id="nav">
+          <nav class="nav">
+            <ul class="header__nav-list" >
+              <li class="header__nav-item">
+                <a href="#" class="header__nav-link"> Главная </a>
+              </li>
+              <li class="header__nav-item">
+                <a href="#" class="header__nav-link"> Слайдер </a>
+              </li>
+              <li class="header__nav-item">
+                <a href="#" class="header__nav-link"> Карточки </a>
+              </li>
+              <li class="header__nav-item">
+                <a href="#" class="header__nav-link"> Форма </a>
+              </li>
+              <li class="header__nav-item">
+                <a href="#" class="header__nav-link"> Список </a>
+              </li>
+              <li class="header__nav-item">
+                <a href="#" class="header__nav-link"> Модалка </a>
+              </li>
+            </ul>
+          </nav>
+
+        </div>
+
+      </div>
+    </header>
+    <main>
+      <section class="intro">
+        <div class="container">
+          <div class="intro__container">
+            <div class="intro__left">
+              <h2 class="section__title">GROWTASK</h2>
+              <span class="intro__subtitle">Тестовое задание</span>
+              <div class="intro__btn">
+                <button id="btn-modal" class="intro__btn-modal">Модальное окно</button>
+              </div>
+            </div>
+            <div class="intro__right">
+              <div class="intro__right-img"></div>
+            </div>
+          </div>
+
+          <div class="intro__modal" id="window-modal">
+            <div class="intro__modal-content">
+              <span class="intro__modal-close">&times;</span>
+              <div class="intro__modal-span">
+                <span class="intro__modal-text">Модалка</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
