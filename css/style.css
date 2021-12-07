@@ -166,7 +166,7 @@ label {
 
   transition-timing-function: ease-in-out;
   transition-duration: 0.3s;
-  transition-property: background-color, width;
+  transition-property: all;
 }
 
 .header__menu-burger-line:not(:last-child) {
@@ -408,6 +408,174 @@ label {
   color: #ad0e35;
 } */
 
+/*cards slider
+===================*/
+.cards__slide-container {
+  margin-top: 30px;
+  width: 100%;
+  height: 900px;
+}
+
+.cards__slide-prev {
+  top: 30px;
+  left: 10px;
+}
+
+.cards__slide-next {
+  top: 30px;
+  left: 70px;
+}
+
+.cards__item {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  bottom: 100px;
+}
+
+/*form
+=============*/
+.form {
+  position: relative;
+}
+.form__background {
+  display: flex;
+}
+
+.form__img1,
+.form__img2 {
+  width: 50%;
+  height: 900px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.form__img1 {
+  background-image: url("../img/form/Img1.png");
+}
+
+.form__img2 {
+  background-image: url("../img/form/Img2.png");
+}
+
+
+
+.container-form {
+  text-align: center;
+  position: absolute;
+  top: 100px;
+}
+
+.form__validation {
+  display: inline-block;
+  padding: 80px 122px 73px 117px;
+
+  background-color: var(--color-white);
+}
+
+.form__form {
+  margin-top: 20px;
+
+}
+
+.form__label {
+  margin-bottom: 20px;
+
+}
+
+.form__input {
+  padding-left: 20px;
+  width: 100%;
+  max-width: 440px;
+  height: 44px;
+}
+
+.form__input::placeholder {
+  font-size: 16px;
+  font-family: 'Raleway';
+  font-weight: 600;
+  line-height: 26px;
+  color: #333;
+
+}
+
+/*accordion
+======================*/
+.accordion__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 150px;
+}
+
+.accordion__title {
+  margin-bottom: 20px;
+}
+
+
+.accordion__wrapper {
+  width: 100%;
+  max-width: 1160px;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.accordion__item {
+  width: 100%;
+  position: relative;
+  padding-bottom: 20px;
+}
+
+.accordion__item-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #F0EBEC;
+  color: var(--color-black);
+  cursor: pointer;
+
+}
+
+.accordion__item-btn {
+  background-image: url("../img/accordion/Button.svg");
+  width: 48px;
+  height: 48px;
+}
+
+.accordion__item-btn:hover {
+  background-image: url("../img/accordion/ButtonHover.svg");
+  transform: rotate(90deg);
+}
+
+.accordion__item-btn:active {
+  background-image: url("../img/accordion/ButtonActive.svg");
+  transform: rotate(90deg);
+}
+
+.accordion__item-content {
+  position: relative;
+  background-color: #F9F9F9;
+  height: 0;
+  overflow: hidden;
+  transition: height .5s ease-in-out;
+}
+
+.accordion__item.active .accordion__item-content {
+  height: 200px;
+}
+
+.accordion__item.active .accordion__item-btn {
+  transform: rotate(180deg);
+  transition: transform .5s ease-in-out;
+}
+
+.accordion__item.active .accordion__item-btn:hover {
+  transform: rotate(90deg);
+}
+
 
 @media (max-width: 1500px) {
   .container {
@@ -511,6 +679,8 @@ label {
 
   .header__nav.open {
     display: block;
+
+    width: 100%;
     transition: all 1s linear;
   }
 
@@ -543,6 +713,23 @@ label {
   .slider__btn-next,
   .slider__btn-prev {
     display: none;
+  }
+
+  /*cards
+  =================*/
+  .cards__slide-container {
+    margin-top: 20px;
+  }
+
+  /*form
+  ====================*/
+  .form__img1,
+  .form__img2 {
+    height: 700px;
+  }
+
+  .form__validation {
+    padding: 30px;
   }
 }
 
@@ -595,6 +782,27 @@ label {
     width: 60%;
     height: 300px;
   }
+
+  /*cards
+  =================*/
+  .cards__slide-container {
+    margin-top: 0;
+    height: 830px;
+  }
+
+  /*form
+  ===============*/
+  .form__form {
+    margin-top: 10px;
+  }
+
+  .form__label {
+    margin-bottom: 10px;
+  }
+
+  .form__input {
+    height: 34px;
+  }
 }
 
 @media (max-width: 499px) {
@@ -629,6 +837,13 @@ label {
     width: 100%;
     height: 240px;
   }
+
+  /*cards
+  =================*/
+  .cards__slide-container {
+    margin-top: 0;
+    height: 750px;
+  }
 }
 
 @media (max-width: 375px) {
@@ -645,6 +860,4 @@ label {
   .header__nav {
     margin-left: calc((100% - 320px) / 2);
   }
-
-
 }
