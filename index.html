@@ -15,7 +15,7 @@
   </head>
   <body>
     <!-- header -->
-    <header class="header">
+    <header class="header fixed" id="header">
       <div class="container">
         <div class="header__container">
           <div class="header__logo"></div>
@@ -29,29 +29,26 @@
           <nav class="nav">
             <ul class="header__nav-list">
               <li class="header__nav-item">
-                <a href="#" class="header__nav-link"> Главная </a>
+                <a data-goto=".intro" href="#" class="header__nav-link"> Главная </a>
               </li>
               <li class="header__nav-item">
-                <a href="#" class="header__nav-link"> Слайдер </a>
+                <a data-goto=".slider" href="#" class="header__nav-link"> Слайдер </a>
               </li>
               <li class="header__nav-item">
-                <a href="#" class="header__nav-link"> Карточки </a>
+                <a data-goto=".cards" href="#" class="header__nav-link"> Карточки </a>
               </li>
               <li class="header__nav-item">
-                <a href="#" class="header__nav-link"> Форма </a>
+                <a data-goto=".form" href="#" class="header__nav-link"> Форма </a>
               </li>
               <li class="header__nav-item">
-                <a href="#" class="header__nav-link"> Список </a>
-              </li>
-              <li class="header__nav-item">
-                <a href="#" class="header__nav-link"> Модалка </a>
+                <a data-goto=".accordion" href="#" class="header__nav-link"> Список </a>
               </li>
             </ul>
           </nav>
         </div>
       </div>
     </header>
-    <main>
+    <main class="main">
       <!-- intro -->
       <section class="intro">
         <div class="container">
@@ -79,7 +76,7 @@
         </div>
       </section>
       <!-- slider -->
-      <section class="section__slider">
+      <section class="slider">
         <div class="container">
           <div class="slider">
             <h2 class="section__title">Слайдер</h2>
@@ -329,6 +326,27 @@
         </div>
       </section>
     </main>
+    <footer class="footer">
+      <nav class="nav">
+        <ul class="header__nav-list">
+          <li class="header__nav-item">
+            <a href="#" class="header__nav-link"> Главная </a>
+          </li>
+          <li class="header__nav-item">
+            <a href="#" class="header__nav-link"> Слайдер </a>
+          </li>
+          <li class="header__nav-item">
+            <a href="#" class="header__nav-link"> Карточки </a>
+          </li>
+          <li class="header__nav-item">
+            <a href="#" class="header__nav-link"> Форма </a>
+          </li>
+          <li class="header__nav-item">
+            <a href="#" class="header__nav-link"> Список </a>
+          </li>
+        </ul>
+      </nav>
+    </footer>
 
     <script src="js/just-validate.min.js"></script>
     <script src="js/inputmask.min.js"></script>
